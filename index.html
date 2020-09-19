@@ -116,7 +116,7 @@
         //************************Basket****************************************
         const OrderBasket = {
             name: 'OrderBasket',
-            template: `<div class="container"><h1>Basket</h1><list-purchases :editable="true"/><router-link :to="{name: 'Checkout'}">Proceed to Checkout</router-link></div>`,
+            template: `<div><h1>Basket</h1><list-purchases :editable="true"/><router-link :to="{name: 'Checkout'}">Proceed to Checkout</router-link></div>`,
         };
         //*************************OrderCheckOutComponent************************
         const OrderCheckOut = {
@@ -135,7 +135,7 @@
                     }
                 }
             },
-            template: `<div class="container"><table class="table"><tr><td><h1>Order Confirmation</h1></td></tr><tr><td><p>Please check the items below and fill in your details to complete your order</p></td></tr></table><list-purchases></list-purchases><form @submit="submitForm()"><h2>Billing Details</h2><label class="col-md-12" for="billingName">Name:</label><input class="col-md-12" type="text" id="billingName" v-model="billing.name" required><label class="col-md-12" for="billingAddress">Address:</label><input class="col-md-12" type="text" id="billingAddress" v-model="billing.address" required><label class="col-md-12" for="billingZipcode">Post code/Zip code:</label><input class="col-md-12" type="text" id="billingZipcode" v-model="billing.zipcode" required><h2>Delivery Details</h2><label class="col-md-12" for="deliveryName">Name:</label><input class="col-md-12" type="text" id="deliveryName" v-model="delivery.name" :disabled="sameAddress" required><label class="col-md-12" for="deliveryAddress">Address:</label><input class="col-md-12" type="text" id="deliveryAddress" v-model="delivery.address" :disabled="sameAddress" required><label class="col-md-12" for="deliveryZipcode">Post code/Zip code:</label><input class="col-md-12" type="text" id="deliveryZipcode" v-model="delivery.zipcode" :disabled="sameAddress" required><input class="col-md-12" type="submit" value="Purchase items"></form></table></div>`,
+            template: `<div><table class="table"><tr><td><h1>Order Confirmation</h1></td></tr><tr><td><p>Please check the items below and fill in your details to complete your order</p></td></tr></table><list-purchases></list-purchases><form @submit="submitForm()"><h2>Billing Details</h2><label class="col-md-12" for="billingName">Name:</label><input class="col-md-12" type="text" id="billingName" v-model="billing.name" required><label class="col-md-12" for="billingAddress">Address:</label><input class="col-md-12" type="text" id="billingAddress" v-model="billing.address" required><label class="col-md-12" for="billingZipcode">Post code/Zip code:</label><input class="col-md-12" type="text" id="billingZipcode" v-model="billing.zipcode" required><h2>Delivery Details</h2><label class="col-md-12" for="deliveryName">Name:</label><input class="col-md-12" type="text" id="deliveryName" v-model="delivery.name" :disabled="sameAddress" required><label class="col-md-12" for="deliveryAddress">Address:</label><input class="col-md-12" type="text" id="deliveryAddress" v-model="delivery.address" :disabled="sameAddress" required><label class="col-md-12" for="deliveryZipcode">Post code/Zip code:</label><input class="col-md-12" type="text" id="deliveryZipcode" v-model="delivery.zipcode" :disabled="sameAddress" required><input class="col-md-12" type="submit" value="Purchase items"></form></table></div>`,
             methods: {
                 submitForm() {
                     // this.billing = billing details
@@ -155,7 +155,7 @@
         };
         //*************************OrderConfirmationComponent*********************
         const OrderConfirmation = {
-            template: `<div class="container"><h1>Order Complete!</h1><p>Thanks for shopping with us - you can expect your products within 2 - 3 working days</p><list-purchases></list-purchases></div>`,
+            template: `<div><h1>Order Complete!</h1><p>Thanks for shopping with us - you can expect your products within 2 - 3 working days</p><list-purchases></list-purchases></div>`,
         };
         const PageNotFound = { template: '<div><h3>404 Page Not Found</h3><p>Head back to the <router-link to="/">home page</router-link> and start again.</p></div>' };
         //>>>>>>>>>>>>>>>>>>>>>>>>>>ListProductsComponent>>>>>>>>>>>>>>>>>>>>>>>
