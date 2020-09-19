@@ -278,7 +278,7 @@
         Vue.component('list-purchases', ListPurchases);
         //************HomePageComponent*******************************
         const HomePage = {
-            template: `<div class="container"><list-products :products="products"></list-products></div>`,
+            template: `<div><list-products :products="products"></list-products></div>`,
                 computed: {
                 products() {
                     let products;
