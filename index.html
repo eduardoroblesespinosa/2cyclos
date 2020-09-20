@@ -37,23 +37,16 @@
                 <!--<router-link to="/confirmation">Order Confirmation</router-link>-->
                 <!--<router-link to="/404"></router-link>-->
                 <router-link to="/product">Product</router-link>
-        
-    </div>
+            </div>
             <!-- route outlet -->
             <!-- component matched by the route will render here -->
-            <div>
-                <p></p>  
-            </div>
             <div class="col-md-12">
                 <router-view name="sidebar"></router-view>
                 <router-view></router-view>
-            </div>
-
-        
+            </div>   
     </div>
     <script>
         // 0. If using a module system, call Vue.use(VueRouter)
-
         // 1. Define route components.
         // These can be imported from other files
         //**********ProductPageComponent****************************************
