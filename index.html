@@ -194,7 +194,7 @@
                         <div :start="pagination.range.from + 1">
                           <div class="row" v-for="product in products">
                            <div class="card">  
-                              <router-link :to="/product/ + product.handle"><img v-if="product.images[0]" :src="product.images[0].source" :alt="product.title"></router-link>
+                              <router-link :to="/product/ + product.handle"><img v-if="product.images[0]" :src="product.images[0].source" :alt="product.title" style="width:100%"></router-link>
                             <div class="containercard">
                               <h3><router-link :to="/product/ + product.handle">{{ product.title }}</router-link></h3>
                               <p>Made by:<strong> {{ product.vendor.title }}</strong></p>
