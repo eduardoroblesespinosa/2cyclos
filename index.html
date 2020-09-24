@@ -22,14 +22,13 @@
         <header class="col-md-12">
           <div><span><img src="css/shopping-cart.png"/><router-link :to="{name: 'Basket'}">Cart : {{ cartQuantity }}</router-link></span></div>
         </header>        
-            <div class="col-md-12 label-primary">
+            <div class="col-md-12">
                 <div>         
                     <p><h1><img src="css/bike.png" alt="bike-logo"/>  2Cyclos</h1></p>
                 </div>
                 <!-- use router-link component for navigation. -->
                 <!-- specify the link by passing the `to` prop. -->
                 <!-- <router-link> will be rendered as an `<a>` tag by default -->
-                <div class="label-info">
                 <router-link to="/">Home</router-link>
                 <!--<router-link to="/category">Category</router-link>-->
                 <router-link to="/order">Order Basket</router-link>
@@ -37,7 +36,7 @@
                 <!--<router-link to="/confirmation">Order Confirmation</router-link>-->
                 <!--<router-link to="/404"></router-link>-->
                 <router-link to="/product">Product</router-link>
-                </div>
+                
             </div>
             <!-- route outlet -->
             <!-- component matched by the route will render here -->
