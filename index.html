@@ -29,13 +29,13 @@
                 <!-- use router-link component for navigation. -->
                 <!-- specify the link by passing the `to` prop. -->
                 <!-- <router-link> will be rendered as an `<a>` tag by default -->
-                <router-link to="/">Catalog</router-link>
+                <h4><router-link to="/">Catalog</router-link></h4>
                 <!--<router-link to="/category">Category</router-link>-->
-                <router-link to="/order">Order Basket</router-link>
-                <router-link to="/checkout">Order CheckOut</router-link>
+                <h4><router-link to="/order">Order Basket</router-link></h4>
+                <h4><router-link to="/checkout">Order CheckOut</router-link></h4>
                 <!--<router-link to="/confirmation">Order Confirmation</router-link>-->
                 <!--<router-link to="/404"></router-link>-->
-                <router-link to="/product">Product</router-link>
+                <h4><router-link to="/product">Product</router-link></h4>
                 
             </div>
             <!-- route outlet -->
@@ -77,7 +77,7 @@
         };
         const ListCategories = {
             name: 'ListCategories',
-            template: `<div v-if="categories"><ul><li v-for="category in categories"><router-link :to="{name: 'Category', params: {slug:category.handle}}">{{ category.name }} ({{ category.products.length }})</router-link></li></ul></div>`,
+            template: `<div v-if="categories"><ul><li v-for="category in categories"><h4><router-link :to="{name: 'Category', params: {slug:category.handle}}">{{ category.name }} ({{ category.products.length }})</router-link></h4></li></ul></div>`,
             computed: {
                 categories() {
                     return this.$store.state.categories;
