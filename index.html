@@ -180,11 +180,15 @@
             template: `<div class="container-fluid" v-if="products">
                         <div :start="pagination.range.from + 1">
                           <div class="row" v-for="product in products">
-                            <div class="col-sm-12"><router-link :to="/product/ + product.handle"><img v-if="product.images[0]" :src="product.images[0].source" :alt="product.title" width="100%"></router-link><h3><router-link :to="/product/ + product.handle">{{ product.title }}</router-link></h3>Made by:<strong> {{ product.vendor.title }}</strong></div>
+                           <div class="card">  
+                              <router-link :to="/product/ + product.handle"><img v-if="product.images[0]" :src="product.images[0].source" :alt="product.title" width="600"></router-link>
+                            <div class="containercard">
+                              <h3><router-link :to="/product/ + product.handle">{{ product.title }}</router-link></h3>
+                              <p>Made by:<strong> {{ product.vendor.title }}</strong></p>
+                            </div>
+                           </div>
                           </div>
                         </div>
-                       </div>
-                      <div>
                          <p>Page {{ currentPage }} out of {{ pagination.totalPages }}Products per page:</p>
                        <select v-model="perPage"><option>12</option><option>24</option><option>48</option><option>60</option></select>
                        <button @click="toPage(currentPage - 1)" :disabled="currentPage==1">Previous page</button>
