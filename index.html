@@ -179,9 +179,7 @@
             template: `<div class="container-fluid" v-if="products">
                         <div :start="pagination.range.from + 1">
                           <div class="row" v-for="product in products">
-                            <div class="col-sm-4"> <h3><router-link :to="/product/ + product.handle">{{ product.title }}</router-link></h3>Made by:<strong> {{ product.vendor.title }}</strong></div>
-                              <div class="col-sm-8"><router-link :to="/product/ + product.handle"><img v-if="product.images[0]" :src="product.images[0].source" :alt="product.title" width="600"></router-link></div>
-                           
+                            <div class="col-sm-12"><h1><router-link :to="/product/ + product.handle">{{ product.title }}</router-link></h1>Made by:<strong> {{ product.vendor.title }}</strong><router-link :to="/product/ + product.handle"><img v-if="product.images[0]" :src="product.images[0].source" :alt="product.title" width="900"></router-link></div>
                           </div>
                         </div>
                        </div>
