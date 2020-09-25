@@ -200,7 +200,7 @@
                     return pages;
                 }
             },
-            template: `<div class="container-fluid" v-if="products">
+            template: `<div v-if="products">
                         <div :start="pagination.range.from + 1">
                           <div class="row" v-for="product in products">
                            <div class="card">  
