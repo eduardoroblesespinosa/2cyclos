@@ -87,6 +87,9 @@
                 addToBasket(variation) {
                     //alert(`Added to basket: ${this.product.title} - ${this.variantTitle(variation)}`);
                     this.$store.commit('addToBasket', this);
+                },
+                updateImage(img) {
+                    this.image = img;
                 }
             }
         };
